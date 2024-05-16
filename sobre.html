@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+
+
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <h2>Vanessa de Souza</h2>
+        <nav>    
+            <ul>
+                <li><a href="sobre.html" class="current">Sobre Mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portifolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo do site -->
+    <main>  
+        <!-- Exibição de imagem e breve mensagem de saudação -->
+        <div class="content">
+            <img src="foto.png" alt="Minha Foto" class="profile-picture">
+            <div class="text">
+                <h2>Seja bem vindo ao meu portifólio pessoal!</h2>
+                <h4 class="gray-text">Aqui apresento um pouco mais sobre mim, minha formação, meus projetos e
+                     deixo a disposição um espaço para contato.
+                </h4>
+            </div>
+        </div>
+
+        <h3>Um pouco mais sobre mim</h3>
+                <p>Sou Vanessa Fátima de Souza, natural de Lavras e entusiasta de programação. Atualmente
+                    curso Engenharia de Controle e Automação pela Universidade Federal de Lavras e 
+                    Análise e Desenvolvimento de Sistemas pela UNINTER. Aprender algo novo e desenvolver 
+                    habilidades são pontos fortes de minha personalidade. A seguir apresento alguns de meus 
+                    principais hobbies e interesses: 
+                </p>
+                <br>
+                <br>
+                <br>
+
+                <!-- Apresentação interativa de alguns de meus principais interesses, quando clicados há exibição de deus respectivos contéudos -->
+                <div class="list-container">
+                    <a href="#" class="list-item" data-target="content-1">Filmes</a>
+                    <a href="#" class="list-item" data-target="content-2">Livros</a>
+                    <a href="#" class="list-item" data-target="content-3">Programação</a>
+                    <a href="#" class="list-item" data-target="content-4">Esportes</a>
+                    <a href="#" class="list-item" data-target="content-5">Música</a>
+                </div>
+                <div class="list-item-content" id="content-1">Posso dizer que sou uma amante da sétima arte e tenho sempre uma referência de
+                    alguma cena, algum final inesperado, reviravoltas inusitadas e trilhas sonoras inesquecíveis.
+                    <h4>Top Filmes:</h4>
+                    <ul>
+                        
+                        <li>Before Sunrise</li>
+                        <br>
+                        <li>The Truman Show</li>
+                        <br>
+                        <li>Forrest Gump</li>
+                    </ul>
+                </div>
+                <div class="list-item-content" id="content-2">Sou fascinada em Leitura. A possibilidade de emaranhar em descobrimento, em novas
+                    realidades e experiências entre as linhas de um livro são ímpares.
+                    <h4>Top Livros:</h4>
+                    <ul>
+                        <li>Sapiens: Uma Breve História da Humanidade - Yuval Harari</li>
+                        <br>
+                        <li>Fernão Capelo Gaivota - Richard Bach</li>
+                        <br>
+                        <li>A Disciplina do Amor - Lygia Fagundes Telles</li>
+                    </ul>
+                </div>
+                <div class="list-item-content" id="content-3">A programação se tornou, além de uma grande paixão, minha área de atuação e nada
+                    melhor do que fazer aquilo que amamos. Atualmente dedico ao aprofundamento nessa área nas graduações de Controle e Automação
+                    e Análise e Desenvolvimento de Sistemas.
+                    <h4>Top Áreas:</h4>
+                    <ul>
+                        <li>Backend</li>
+                        <br>
+                        <li>Frontend</li>
+                        <br>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+                <div class="list-item-content" id="content-4">Para além da saúde o esporte representa para mim um símbolo de resiliência,
+                    determinação e superação.
+                    <h4>Top Esportes:</h4>
+                    <ul>
+                        <li>Basquete</li>
+                        <br>
+                        <li>Vôlei</li>
+                        <br>
+                        <li>Hipismo</li>
+                    </ul>
+                </div>
+                <div class="list-item-content" id="content-5"> Sócrates já dizia que a música é o espelho da alma. De certo não há um dia sem que
+                    uma faixa musical me acompanhe, desde aquelas que marcaram época a algo alternativo.
+                    <h4>Top Instrumentos:</h4>
+                    <ul>
+                        <li>Violão</li>
+                        <br>
+                        <li>Guitarra</li>
+                        <br>
+                        <li>Violino</li>
+                    </ul>
+                </div>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>© 2024 Vanessa Fátima de Souza</p>
+    </footer>
+
+    <!-- Controla comportamento de alternância de conteúdo com base nos cliques em links específicos com a classe .list-item -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.list-item');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    const contents = document.querySelectorAll('.list-item-content');
+                    contents.forEach(function(content) {
+                        content.style.display = 'none';
+                    });
+                    targetContent.style.display = 'block';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

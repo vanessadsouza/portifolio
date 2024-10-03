@@ -5,6 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho do site */
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .current {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        /* Estilização do conteúdo principal */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilização dos ícones de contato */
+        .contact-icon {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .contact-icon a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .contact-icon img {
+            width: 50px; /* Tamanho do ícone */
+            height: 50px; /* Tamanho do ícone */
+            margin-bottom: 5px;
+        }
+
+        /* Rodapé do site */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,31 +92,22 @@
 
     <!-- Conteúdo do site -->
     <main>
-        <!-- Formulário para envio de mensagem em caso de contato -->
-        <form action="enviar.php" method="POST">
-            
-            <div>
-                <h2>Entre em contato</h2>
-                <p>Deixo a disposição esse espaço para contato ou em email: vanessafatima.desouza@gmail.com</p>
-            </div>
-             <br>
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <br>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <br>
-            <div>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-            </div>
+        <h2>Entre em contato</h2>
+        <p>Deixo a disposição esse espaço para contato:</p>
 
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contact-icon">
+            <a href="mailto:vanessafatima.desouza@gmail.com" title="Enviar Email">
+                <img src="https://img.icons8.com/material-outlined/24/000000/email.png" alt="Ícone de Email">
+                <p>Email: vanessafatima.desouza@gmail.com</p>
+            </a>
+        </div>
+
+        <div class="contact-icon">
+            <a href="https://www.linkedin.com/in/seu-perfil" title="Perfil no LinkedIn" target="_blank">
+                <img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="Ícone do LinkedIn">
+                <p>LinkedIn: seu-perfil</p>
+            </a>
+        </div>
     </main>
 
     <!-- Rodapé do site -->
@@ -56,38 +116,3 @@
     </footer>
 </body>
 </html>
-
-
-<!-- Estilização do formulário -->
-<style>
-
-    form {
-
-        max-width: 400px;
-        margin: 0 auto;
-        background-color: white; 
-        padding: 40px; 
-        border-radius: 5px; 
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
-    }
-
-    label {
-        display: block;
-        margin-bottom: 10px; 
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 20px; 
-    }
-
-    button {
-        padding: 10px 20px;
-        background-color:gray;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-</style>
